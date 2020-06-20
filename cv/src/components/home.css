@@ -1,16 +1,18 @@
 @media screen and (min-width: 600px) {
   .info-right {
-    float: right;
-    width: calc(80% - 40px);
+    float: left;
+    width: calc(100% - 380px);
     background-color: lightcoral;
     color: black;
     padding: 20px;
     margin: 0 20px;
+    border-radius: 5px;
   }
 
   .aside {
     width: calc(20% - 20px);
     margin: 20px;
+    min-width: 300px;
   }
 
   .basic-info {
@@ -18,11 +20,18 @@
     float: left;
     margin: 20px;
     width: calc(20% - 20px);
+    min-width: 300px;
     background-color: lightcoral;
     color: black;
     padding: 20px;
     overflow: auto;
+    border-radius: 5px;
   }
+}
+
+.container {
+  margin: 0;
+  padding: 0;
 }
 
 h3 {
@@ -40,7 +49,7 @@ img {
   background-color: lightcoral;
   color: black;
   padding: 20px;
-  border-radius: 0px;
+  border-radius: 5px;
 }
 
 .aside {
@@ -54,6 +63,7 @@ img {
   background-color: lightcoral;
   color: black;
   padding: 20px;
+  border-radius: 5px;
 }
 
 .info-right {
@@ -61,6 +71,7 @@ img {
   color: black;
   padding: 20px;
   margin: 0 20px;
+  border-radius: 5px;
 }
 
 .clear {

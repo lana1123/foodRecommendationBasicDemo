@@ -77,15 +77,14 @@ body {
   height: 15px;
 }
 
+.timeline-item:nth-child(odd) .timeline-item-content::after {
+  left: -7.5px;
+  box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
 .timeline-item:nth-child(odd) .timeline-item-content {
   align-items: flex-start;
   text-align: left;
-}
-
-.timeline-item:nth-child(odd) .timeline-item-content::after {
-  right: auto;
-  left: -7.5px;
-  box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.2);
 }
 
 .timeline-item-content p {
@@ -102,6 +101,7 @@ body {
   position: absolute;
   top: calc(50% - 10px);
   right: -40px;
+  left: auto;
   z-index: 100;
   width: 20px;
   height: 20px;
@@ -110,4 +110,182 @@ body {
 .timeline-item:nth-child(odd) .timeline-item-content .circle {
   left: -40px;
   right: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .timeline-container {
+    display: flex;
+    flex-direction: column;
+    margin: 40px 0;
+    position: relative;
+  }
+
+  .timeline-container::after {
+    background-color: #e17b77;
+    content: "";
+    position: absolute;
+    left: 50px;
+    width: 4px;
+    height: 100%;
+  }
+
+  .timeline-item {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 30px;
+    margin: 10px 0;
+    width: 80%;
+  }
+
+  .timeline-item:nth-child(odd) {
+    display: flex;
+    justify-content: flex-start;
+    padding-right: 30px;
+    margin: 10px 0;
+    width: 80%;
+  }
+
+  .timeline-item-content {
+    max-width: 70%;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    display: flex;
+    align-items: flex-start;
+    padding: 15px;
+    text-align: left;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .timeline-item-content::after {
+    content: "";
+    background-color: white;
+    box-shadow: 1px -1px 1px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    transform: rotate(45deg);
+    z-index: -10;
+    left: -7.5px;
+    top: calc(50% - 7.5px);
+    width: 15px;
+    height: 15px;
+  }
+
+  /* .timeline-item:nth-child(odd) .timeline-item-content {
+    text-align: left;
+  } */
+
+  .timeline-item-content p {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 10px 0;
+    max-width: 250px;
+  }
+
+  .timeline-item-content .circle {
+    background-color: white;
+    border: 3px solid #e17b77;
+    border-radius: 50%;
+    position: absolute;
+    top: calc(50% - 10px);
+    left: -66px;
+    z-index: 100;
+    width: 20px;
+    height: 20px;
+  }
+
+  .timeline-item:nth-child(odd) .timeline-item-content .circle {
+    left: -85px;
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .timeline-container {
+    display: flex;
+    flex-direction: column;
+    margin: 40px 0;
+    position: relative;
+  }
+
+  .timeline-container::after {
+    background-color: #e17b77;
+    content: "";
+    position: absolute;
+    left: 50px;
+    width: 4px;
+    height: 100%;
+  }
+
+  .timeline-item {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 30px;
+    margin: 10px 0;
+    width: 80%;
+  }
+
+  .timeline-item:nth-child(odd) {
+    display: flex;
+    justify-content: flex-start;
+    padding-right: 30px;
+    margin: 10px 0;
+    width: 80%;
+  }
+
+  .timeline-item-content {
+    max-width: 70%;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    display: flex;
+    align-items: flex-start;
+    padding: 15px;
+    text-align: left;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .timeline-item-content::after {
+    content: "";
+    background-color: white;
+    box-shadow: 1px -1px 1px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    transform: rotate(45deg);
+    z-index: -10;
+    left: -7.5px;
+    top: calc(50% - 7.5px);
+    width: 15px;
+    height: 15px;
+  }
+
+  /* .timeline-item:nth-child(odd) .timeline-item-content {
+    text-align: left;
+  } */
+
+  .timeline-item-content p {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 10px 0;
+    max-width: 250px;
+  }
+
+  .timeline-item-content .circle {
+    background-color: white;
+    border: 3px solid #e17b77;
+    border-radius: 50%;
+    position: absolute;
+    top: calc(50% - 10px);
+    left: -37px;
+    z-index: 100;
+    width: 20px;
+    height: 20px;
+  }
+
+  .timeline-item:nth-child(odd) .timeline-item-content .circle {
+    left: -60px;
+    margin-left: 0;
+  }
 }
