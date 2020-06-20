@@ -1,11 +1,15 @@
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 769px) {
   .portfolio-container {
-    margin-top: 30px;
+    margin-top: 56px;
     color: white;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
   }
+}
+
+.portfolio-container {
+  margin: 56px 10px auto 10px;
 }
 
 .portfolio-item {
@@ -27,6 +31,10 @@ li {
 
 a:link {
   color: white;
+}
+
+a {
+  word-wrap: break-word;
 }
 
 a:visited {
