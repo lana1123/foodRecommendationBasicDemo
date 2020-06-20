@@ -1,0 +1,31 @@
+@media screen and (min-width: 600px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: black;
+    z-index: 101;
+  }
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  top: 0;
+
+  padding: 10px;
+  background-color: black;
+  z-index: 101;
+}
+
+.navbar-entry {
+  margin: 0px 20px;
+  color: white;
+  text-decoration: none; /*to remove underline*/
+  z-index: 100;
+}
+
+.navbar-entry:hover {
+  text-decoration: underline;
+}

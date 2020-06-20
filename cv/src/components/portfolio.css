@@ -1,0 +1,42 @@
+@media screen and (min-width: 600px) {
+  .portfolio-container {
+    margin-top: 30px;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
+.portfolio-item {
+  color: black;
+  margin: 10px;
+  padding: 10px;
+  background-color: lightcoral;
+  border-radius: 5px;
+}
+
+ul {
+  margin-top: 10px;
+  padding: 0;
+}
+
+li {
+  margin-left: 20px;
+}
+
+a:link {
+  color: white;
+}
+
+a:visited {
+  /* color: blue; */
+}
+
+a:hover {
+  color: orange;
+}
+
+a:active {
+  color: green;
+}

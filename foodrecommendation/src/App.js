@@ -103,15 +103,11 @@ class App extends Component {
 
   render() {
     return (
-      <Router>
+      <Router basename={process.env.PUBLIC_URL + "/"}>
         <NavBar />
         <header className="App-header">
           <Switch>
-            <Route
-              exact
-              path="/foodRecommendationBasicDemo"
-              component={FoodList}
-            />
+            <Route exact path="/" component={FoodList} />
             <Route
               path="/foodlist"
               render={(props) => (

@@ -1,0 +1,27 @@
+.category {
+  color: white;
+  clear: left;
+  margin-top: 50px;
+}
+
+.skills {
+  color: black;
+  height: 80px;
+  width: 80px;
+  font-size: 14px;
+  background-color: lightcoral;
+  border-radius: 5px;
+  float: left;
+  text-align: center;
+  line-height: 80px;
+  margin: 10px;
+  overflow: wrap;
+}
+
+.skills:hover {
+  transform: translateY(-3px) scale(1.1);
+}
+
+.wrapper {
+  margin-left: 20px;
+}
