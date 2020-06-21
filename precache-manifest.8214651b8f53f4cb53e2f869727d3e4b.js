@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b6ed0e6a34a4d1e75dcfc558c9cec225",
+    "revision": "652116abb681ccd536a9855196f861bd",
     "url": "/foodRecommendationBasicDemo/index.html"
   },
   {
-    "revision": "c1d402a25ad26733d63d",
+    "revision": "dbe9c92b02c3cb5787e5",
     "url": "/foodRecommendationBasicDemo/static/css/main.24c4fa0e.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/foodRecommendationBasicDemo/static/js/2.3b68cc82.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c1d402a25ad26733d63d",
-    "url": "/foodRecommendationBasicDemo/static/js/main.d22318dd.chunk.js"
+    "revision": "dbe9c92b02c3cb5787e5",
+    "url": "/foodRecommendationBasicDemo/static/js/main.803dc28a.chunk.js"
   },
   {
     "revision": "96843086a7fd8b2e781f",
