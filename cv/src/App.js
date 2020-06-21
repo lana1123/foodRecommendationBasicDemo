@@ -9,7 +9,6 @@ import Portfolio from "./components/portfolio";
 import SideDrawer from "./components/SideDrawer/SideDrawer";
 import Backdrop from "./components/Backdrop/Backdrop";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import sideDrawer from "./components/SideDrawer/SideDrawer";
 
 class App extends Component {
   state = {

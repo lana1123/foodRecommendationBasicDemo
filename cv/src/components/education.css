@@ -9,13 +9,13 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
   min-height: 100vh;
   font-family: "Lato", sans-serif;
   margin: 0;
-  color: black;
+  color: blueviolet;
 }
 
+/* the container will always take 100% of the width */
 #root {
   width: 100%;
 }
@@ -27,15 +27,17 @@ body {
   position: relative;
 }
 
+/* line */
 .timeline-container::after {
   background-color: #e17b77;
   content: "";
-  position: absolute;
-  left: calc(50% - 2px);
   width: 4px;
   height: 100%;
+  position: absolute;
+  left: calc(50% - 2px); /*to center the line*/
 }
 
+/*container of each item (50% of the parent container) */
 .timeline-item {
   display: flex;
   justify-content: flex-end;
@@ -51,24 +53,31 @@ body {
   padding-left: 30px;
 }
 
+/*content of each item (70% of the item container) */
 .timeline-item-content {
-  max-width: 70%;
+  max-width: 90%;
   background-color: white;
+  color: black;
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   width: 400px;
   display: flex;
   align-items: flex-end;
+  flex-direction: column;
   padding: 15px;
   text-align: right;
-  flex-direction: column;
   position: relative;
+  z-index: 1;
+}
+
+.timeline-item:nth-child(odd) .timeline-item-content {
+  align-items: flex-start;
+  text-align: left;
 }
 
 .timeline-item-content::after {
   content: "";
   background-color: white;
-  box-shadow: 1px -1px 1px rgba(0, 0, 0, 0.2);
   position: absolute;
   transform: rotate(45deg);
   right: -7.5px;
@@ -79,15 +88,10 @@ body {
 
 .timeline-item:nth-child(odd) .timeline-item-content::after {
   left: -7.5px;
-  box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.2);
-}
-
-.timeline-item:nth-child(odd) .timeline-item-content {
-  align-items: flex-start;
-  text-align: left;
 }
 
 .timeline-item-content p {
+  color: black;
   font-size: 16px;
   line-height: 24px;
   margin: 10px 0;
@@ -100,7 +104,7 @@ body {
   border-radius: 50%;
   position: absolute;
   top: calc(50% - 10px);
-  right: -40px;
+  right: -40px; /*40px right padding and half of itself*/
   left: auto;
   z-index: 100;
   width: 20px;
@@ -112,180 +116,83 @@ body {
   right: auto;
 }
 
-@media screen and (max-width: 600px) {
-  .timeline-container {
+@media screen and (max-width: 767px) {
+  .timeline-container,
+  .timeline-container:nth-child(odd) {
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     margin: 40px 0;
     position: relative;
   }
 
+  /* line */
   .timeline-container::after {
     background-color: #e17b77;
     content: "";
-    position: absolute;
-    left: 50px;
     width: 4px;
     height: 100%;
+    position: absolute;
+    left: 40px;
   }
 
-  .timeline-item {
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 30px;
-    margin: 10px 0;
-    width: 80%;
-  }
-
+  /*container of each item (70% of the parent container) */
+  .timeline-item,
   .timeline-item:nth-child(odd) {
+    align-self: flex-start;
     display: flex;
     justify-content: flex-start;
-    padding-right: 30px;
-    margin: 10px 0;
-    width: 80%;
+    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 70px;
+    width: 300px;
   }
 
-  .timeline-item-content {
-    max-width: 70%;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    width: 400px;
-    display: flex;
-    align-items: flex-start;
-    padding: 15px;
-    text-align: left;
-    flex-direction: column;
-    position: relative;
-  }
-
-  .timeline-item-content::after {
+  .timeline-item-content::after,
+  .timeline-item:nth-child(odd) .timeline-item-content::after {
     content: "";
     background-color: white;
-    box-shadow: 1px -1px 1px rgba(0, 0, 0, 0.2);
     position: absolute;
     transform: rotate(45deg);
-    z-index: -10;
     left: -7.5px;
     top: calc(50% - 7.5px);
     width: 15px;
     height: 15px;
   }
 
-  /* .timeline-item:nth-child(odd) .timeline-item-content {
-    text-align: left;
-  } */
-
-  .timeline-item-content p {
-    font-size: 16px;
-    line-height: 24px;
-    margin: 10px 0;
-    max-width: 250px;
-  }
-
-  .timeline-item-content .circle {
-    background-color: white;
-    border: 3px solid #e17b77;
-    border-radius: 50%;
-    position: absolute;
-    top: calc(50% - 10px);
-    left: -66px;
-    z-index: 100;
-    width: 20px;
-    height: 20px;
-  }
-
-  .timeline-item:nth-child(odd) .timeline-item-content .circle {
-    left: -85px;
-    margin-left: 0;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .timeline-container {
-    display: flex;
-    flex-direction: column;
-    margin: 40px 0;
-    position: relative;
-  }
-
-  .timeline-container::after {
-    background-color: #e17b77;
-    content: "";
-    position: absolute;
-    left: 50px;
-    width: 4px;
-    height: 100%;
-  }
-
-  .timeline-item {
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 30px;
-    margin: 10px 0;
-    width: 80%;
-  }
-
-  .timeline-item:nth-child(odd) {
-    display: flex;
-    justify-content: flex-start;
-    padding-right: 30px;
-    margin: 10px 0;
-    width: 80%;
-  }
-
-  .timeline-item-content {
-    max-width: 70%;
+  /*content of each item (70% of the item container) */
+  .timeline-item-content,
+  .timeline-item:nth-child(odd) .timeline-item-content {
     background-color: white;
     border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    width: 400px;
+    color: black;
+    width: 300px;
     display: flex;
-    align-items: flex-start;
-    padding: 15px;
-    text-align: left;
+    align-items: flex-end;
     flex-direction: column;
+    padding: 15px;
+    text-align: right;
     position: relative;
   }
-
-  .timeline-item-content::after {
-    content: "";
-    background-color: white;
-    box-shadow: 1px -1px 1px rgba(0, 0, 0, 0.2);
-    position: absolute;
-    transform: rotate(45deg);
-    z-index: -10;
-    left: -7.5px;
-    top: calc(50% - 7.5px);
-    width: 15px;
-    height: 15px;
-  }
-
-  /* .timeline-item:nth-child(odd) .timeline-item-content {
-    text-align: left;
-  } */
 
   .timeline-item-content p {
     font-size: 16px;
     line-height: 24px;
     margin: 10px 0;
     max-width: 250px;
+    color: black;
   }
 
-  .timeline-item-content .circle {
+  .timeline-item-content .circle,
+  .timeline-item:nth-child(odd) .timeline-item-content .circle {
     background-color: white;
     border: 3px solid #e17b77;
     border-radius: 50%;
     position: absolute;
     top: calc(50% - 10px);
-    left: -37px;
-    z-index: 100;
+    left: -40px;
     width: 20px;
     height: 20px;
-  }
-
-  .timeline-item:nth-child(odd) .timeline-item-content .circle {
-    left: -60px;
-    margin-left: 0;
   }
 }
