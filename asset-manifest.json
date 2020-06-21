@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/foodRecommendationBasicDemo/static/css/main.36bafaed.chunk.css",
+    "main.css": "/foodRecommendationBasicDemo/static/css/main.fed8d31c.chunk.css",
     "main.js": "/foodRecommendationBasicDemo/static/js/main.b0670809.chunk.js",
     "main.js.map": "/foodRecommendationBasicDemo/static/js/main.b0670809.chunk.js.map",
     "runtime-main.js": "/foodRecommendationBasicDemo/static/js/runtime-main.db8c0423.js",
@@ -8,15 +8,15 @@
     "static/js/2.3b68cc82.chunk.js": "/foodRecommendationBasicDemo/static/js/2.3b68cc82.chunk.js",
     "static/js/2.3b68cc82.chunk.js.map": "/foodRecommendationBasicDemo/static/js/2.3b68cc82.chunk.js.map",
     "index.html": "/foodRecommendationBasicDemo/index.html",
-    "precache-manifest.0c1ea5ed4265e1d1eb28419d9c26a7a6.js": "/foodRecommendationBasicDemo/precache-manifest.0c1ea5ed4265e1d1eb28419d9c26a7a6.js",
+    "precache-manifest.3814ac46270a16909de318a2b4447bfa.js": "/foodRecommendationBasicDemo/precache-manifest.3814ac46270a16909de318a2b4447bfa.js",
     "service-worker.js": "/foodRecommendationBasicDemo/service-worker.js",
-    "static/css/main.36bafaed.chunk.css.map": "/foodRecommendationBasicDemo/static/css/main.36bafaed.chunk.css.map",
+    "static/css/main.fed8d31c.chunk.css.map": "/foodRecommendationBasicDemo/static/css/main.fed8d31c.chunk.css.map",
     "static/js/2.3b68cc82.chunk.js.LICENSE.txt": "/foodRecommendationBasicDemo/static/js/2.3b68cc82.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.db8c0423.js",
     "static/js/2.3b68cc82.chunk.js",
-    "static/css/main.36bafaed.chunk.css",
+    "static/css/main.fed8d31c.chunk.css",
     "static/js/main.b0670809.chunk.js"
   ]
 }
